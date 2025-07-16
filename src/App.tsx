@@ -1,4 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
+
+function Arrow() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="size-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+      />
+    </svg>
+  );
+}
+
+function Share() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="size-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+      />
+    </svg>
+  );
+}
+
+function Eye() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="size-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+      />
+    </svg>
+  );
+}
 
 function Bolt() {
   return (
@@ -63,14 +125,14 @@ function Timeline() {
       username: "vedadian",
       avatar: "/img/bv1361.jpeg",
       description: "Started the quest",
-      timestamp: "Feb 27, 2025, 9:35 AM GMT+3:30",
+      timestamp: "Feb 27, 2025, 9:35 AM",
       icon: Bolt,
     },
     {
       username: "zhn1010",
       avatar: "/img/zhn1010.jpeg",
       description: "Commented on the quest",
-      timestamp: "Feb 27, 2025, 10:00 AM GMT+3:30",
+      timestamp: "Feb 27, 2025, 10:00 AM",
       content:
         "I saw a similar bike in my neighborhood last week. I'll keep an eye out for it!",
       icon: ChatBubble,
@@ -122,328 +184,92 @@ function Timeline() {
 }
 
 function ShareTree() {
-  return (
-    <svg
-      width="223"
-      height="398.5"
-      viewBox="-32 -32 223 398.5"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="relative"
-      style={{
-        transform: "rotate(90deg) translateX(-120px) translateY(-25%)",
-      }}
-    >
-      <g>
-        <path
-          d="M 32 199.25 L 32 270.5 M 32 64 L 32 135.25"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke="rgba(0,0,0,0.2)"
-          stroke-width="10"
-          className="transition-all duration-200"
-          filter="blur(2px)"
-        ></path>
-        <path
-          d="M 32 199.25 L 32 270.5 M 32 64 L 32 135.25"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke="currentColor"
-          stroke-width="8"
-          className="text-information-border-secondary transition-all duration-200"
-        ></path>
-      </g>
-      <g>
-        <circle
-          cx="32"
-          cy="302.5"
-          r="32"
-          stroke-width="8"
-          fill="transparent"
-          className="stroke-information-border-secondary"
-        ></circle>
-        <circle
-          cx="32"
-          cy="302.5"
-          r="32"
-          stroke-width="1"
-          stroke="white"
-          fill="white"
-        ></circle>
-        <mask id="mask-0-32-302.5">
-          <circle
-            cx="32"
-            cy="302.5"
-            r="32"
-            stroke-width="0"
-            fill="white"
-          ></circle>
-        </mask>
-        <image
-          x="0"
-          y="270.5"
-          width="64"
-          height="64"
-          href="https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvdXBsb2FkZWQvaW1nXzJ4Vk5ad0VoREtCTkNBRnVXVVV0TDkwQkFWNCJ9"
-          mask="url(#mask-0-32-302.5)"
-          className="filter transition duration-300"
-        ></image>
-        <text
-          x="70.4"
-          y="294.5"
-          className="font-body font-bold text-helper leading-helper fill-information-content-primary"
-          data-content="Behrooz. Vedadian"
-          style={{ fontSize: "11px" }}
-        >
-          Behrooz. V…
-        </text>
-        <text
-          x="70.4"
-          y="310.5"
-          className="font-body font-regular text-[10px] leading-[13px] fill-information-content-secondary"
-          data-content="29 days ago"
-          style={{ fontSize: "11px" }}
-        >
-          29 days ago
-        </text>
-      </g>
-      <g>
-        <circle
-          cx="32"
-          cy="167.25"
-          r="32"
-          stroke-width="8"
-          fill="transparent"
-          className="stroke-information-border-secondary"
-        ></circle>
-        <circle
-          cx="32"
-          cy="167.25"
-          r="32"
-          stroke-width="1"
-          stroke="white"
-          fill="white"
-        ></circle>
-        <mask id="mask-0-32-167.25">
-          <circle
-            cx="32"
-            cy="167.25"
-            r="32"
-            stroke-width="0"
-            fill="white"
-          ></circle>
-        </mask>
-        <image
-          x="0"
-          y="135.25"
-          width="64"
-          height="64"
-          href="https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18ycExNVXJ3ZXJXUE9VdEgzMXdsQzVOWnJZbUcifQ"
-          mask="url(#mask-0-32-167.25)"
-          className="filter transition duration-300"
-        ></image>
-        <g transform="translate(40, 183.25)">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z"
-              fill="#BFC8D0"
-            ></path>
-            <path
-              d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4 18.5589 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z"
-              fill="url(#paint0_linear_87_7264)"
-            ></path>
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 18.5109 2.661 20.8674 3.81847 22.905L2 30L9.31486 28.3038C11.3014 29.3854 13.5789 30 16 30ZM16 27.8462C22.5425 27.8462 27.8462 22.5425 27.8462 16C27.8462 9.45755 22.5425 4.15385 16 4.15385C9.45755 4.15385 4.15385 9.45755 4.15385 16C4.15385 18.5261 4.9445 20.8675 6.29184 22.7902L5.23077 26.7692L9.27993 25.7569C11.1894 27.0746 13.5046 27.8462 16 27.8462Z"
-              fill="white"
-            ></path>
-            <path
-              d="M12.5 9.49989C12.1672 8.83131 11.6565 8.8905 11.1407 8.8905C10.2188 8.8905 8.78125 9.99478 8.78125 12.05C8.78125 13.7343 9.52345 15.578 12.0244 18.3361C14.438 20.9979 17.6094 22.3748 20.2422 22.3279C22.875 22.2811 23.4167 20.0154 23.4167 19.2503C23.4167 18.9112 23.2062 18.742 23.0613 18.696C22.1641 18.2654 20.5093 17.4631 20.1328 17.3124C19.7563 17.1617 19.5597 17.3656 19.4375 17.4765C19.0961 17.8018 18.4193 18.7608 18.1875 18.9765C17.9558 19.1922 17.6103 19.083 17.4665 19.0015C16.9374 18.7892 15.5029 18.1511 14.3595 17.0426C12.9453 15.6718 12.8623 15.2001 12.5959 14.7803C12.3828 14.4444 12.5392 14.2384 12.6172 14.1483C12.9219 13.7968 13.3426 13.254 13.5313 12.9843C13.7199 12.7145 13.5702 12.305 13.4803 12.05C13.0938 10.953 12.7663 10.0347 12.5 9.49989Z"
-              fill="white"
-            ></path>
-            <defs>
-              <linearGradient
-                id="paint0_linear_87_7264"
-                x1="26.5"
-                y1="7"
-                x2="4"
-                y2="28"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#5BD066"></stop>
-                <stop offset="1" stop-color="#27B43E"></stop>
-              </linearGradient>
-            </defs>
-          </svg>
-        </g>
-        <text
-          x="70.4"
-          y="159.25"
-          className="font-body font-bold text-helper leading-helper fill-information-content-primary"
-          data-content="Saeed Torabzadeh"
-          style={{ fontSize: "11px" }}
-        >
-          Saeed Tora…
-        </text>
-        <text
-          x="70.4"
-          y="175.25"
-          className="font-body font-regular text-[10px] leading-[13px] fill-information-content-secondary"
-          data-content="29 days ago"
-          style={{ fontSize: "11px" }}
-        >
-          29 days ago
-        </text>
-        <g>
-          <circle
-            cx="57.6"
-            cy="141.65"
-            r="16"
-            className="fill-gray-100"
-            stroke="silver"
-            stroke-width="2"
-          ></circle>
-          <text
-            x="57.6"
-            y="149.65"
-            text-anchor="middle"
-            className="font-body font-bold text-[10px] leading-[10px] fill-white pointer-events-none text-xl"
-          >
-            🥈
-          </text>
-        </g>
-      </g>
-      <g>
-        <circle
-          cx="32"
-          cy="32"
-          r="32"
-          stroke-width="8"
-          fill="transparent"
-          className="stroke-information-border-secondary"
-        ></circle>
-        <circle
-          cx="32"
-          cy="32"
-          r="32"
-          stroke-width="1"
-          stroke="white"
-          fill="white"
-        ></circle>
-        <mask id="mask-0-32-32">
-          <circle cx="32" cy="32" r="32" stroke-width="0" fill="white"></circle>
-        </mask>
-        <image
-          x="0"
-          y="0"
-          width="64"
-          height="64"
-          href="https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvdXBsb2FkZWQvaW1nXzJ4T2FLRktxbGFQTTc2TDJCbTVUM2p3OHpVbCJ9"
-          mask="url(#mask-0-32-32)"
-          className="filter transition duration-300"
-        ></image>
-        <g transform="translate(40, 48)">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="16"
-              cy="16"
-              r="14"
-              fill="url(#paint0_linear_87_7225)"
-            ></circle>
-            <path
-              d="M22.9866 10.2088C23.1112 9.40332 22.3454 8.76755 21.6292 9.082L7.36482 15.3448C6.85123 15.5703 6.8888 16.3483 7.42147 16.5179L10.3631 17.4547C10.9246 17.6335 11.5325 17.541 12.0228 17.2023L18.655 12.6203C18.855 12.4821 19.073 12.7665 18.9021 12.9426L14.1281 17.8646C13.665 18.3421 13.7569 19.1512 14.314 19.5005L19.659 22.8523C20.2585 23.2282 21.0297 22.8506 21.1418 22.1261L22.9866 10.2088Z"
-              fill="white"
-            ></path>
-            <defs>
-              <linearGradient
-                id="paint0_linear_87_7225"
-                x1="16"
-                y1="2"
-                x2="16"
-                y2="30"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#37BBFE"></stop>
-                <stop offset="1" stop-color="#007DBB"></stop>
-              </linearGradient>
-            </defs>
-          </svg>
-        </g>
-        <text
-          x="70.4"
-          y="24"
-          className="font-body font-bold text-helper leading-helper fill-information-content-primary"
-          data-content="Behrooz Vedadian"
-          style={{ fontSize: "11px" }}
-        >
-          Behrooz Ve…
-        </text>
-        <text
-          x="70.4"
-          y="40"
-          className="font-body font-regular text-[10px] leading-[13px] fill-information-content-secondary"
-          data-content="29 days ago"
-          style={{ fontSize: "11px" }}
-        >
-          29 days ago
-        </text>
-        <g>
-          <circle
-            cx="57.6"
-            cy="6.399999999999999"
-            r="16"
-            className="fill-gray-100"
-            stroke="gold"
-            stroke-width="2"
-          ></circle>
-          <text
-            x="57.6"
-            y="14.399999999999999"
-            text-anchor="middle"
-            className="font-body font-bold text-[10px] leading-[10px] fill-white pointer-events-none text-xl"
-          >
-            🏆
-          </text>
-        </g>
-      </g>
-    </svg>
-  );
+  return null;
 }
 
 function App() {
+  const [intoVisible, setIntoVisible] = useState(true);
   return (
-    <div className="w-full h-auto flex flex-col p-6 gap-3">
-      <h1>Stolen Sentimental Trek</h1>
-      <img
-        className="w-full rounded-box"
-        src="/img/bounty-trek-520-grando-51cm-v0-skkyfex4c46f1.jpg"
-        alt="Cover"
-      />
-      <div className="collapse bg-accent/15 border-accent text-accent-content border">
+    <div className="relative w-full h-auto flex flex-col p-6 gap-3">
+      <h1 className="font-bold text-2xl">Stolen Sentimental Trek</h1>
+      <div className="relative group">
+        <input
+          type="checkbox"
+          className="absolute z-20 left-0 top-0 right-0 bottom-0 opacity-0 cursor-pointer"
+        />
+        <img
+          className="w-full rounded-box"
+          src="/img/bounty-trek-520-grando-51cm-v0-skkyfex4c46f1.jpg"
+          alt="Cover"
+        />
+        <div className="absolute rounded-box z-10 p-4 bottom-0 w-full bg-secondary-content/35 group-has-[:checked]:opacity-0 opacity-100 transition-opacity duration-700 text-secondary font-bold flex flex-row gap-4 items-center">
+          <div className="flex flex-row items-center gap-2">
+            <div className="inline-block">
+              <Eye />
+            </div>
+            300
+          </div>
+          <div className="flex flex-row items-center gap-2">
+            <div className="inline-block">
+              <Share />
+            </div>
+            10
+          </div>
+          <div className="flex flex-row items-center gap-2">
+            <div className="inline-block">
+              <Arrow />
+            </div>
+            3
+          </div>
+          <div className="flex-1"></div>
+          <progress
+            className="progress progress-secondary max-w-20"
+            value="50"
+            max="100"
+          ></progress>
+          <div className="badge badge-outline">More</div>
+        </div>
+        <div className="absolute rounded-box z-10 p-4 bottom-0 h-full w-full bg-secondary-content/85 group-has-[:checked]:opacity-100 opacity-0 transition-opacity duration-700 text-secondary font-bold flex flex-col gap-3 items-start">
+          <div className="flex flex-row items-center gap-2">
+            <div className="inline-block">
+              <Eye />
+            </div>
+            300 people has seen this page
+          </div>
+          <div className="flex flex-row items-center gap-2">
+            <div className="inline-block">
+              <Share />
+            </div>
+            10 has taken action
+          </div>
+          <div className="flex flex-row items-center gap-2">
+            <div className="inline-block">
+              <Arrow />
+            </div>
+            3 leads are submitted
+          </div>
+          <div className="flex-1"></div>
+          <div>
+            <progress
+              className="progress progress-secondary max-w-100"
+              value="50"
+              max="100"
+            ></progress>{" "}
+            Halfway to desired action/view ratio
+          </div>
+          <div className="badge badge-outline self-end">Less</div>
+        </div>
+      </div>
+      <div className="collapse bg-warning-content text-warning border border-warning">
         <input type="checkbox" />
         <div className="collapse-title pr-4 font-semibold flex flex-row justify-between">
           🌺 Your action may be crucial
-          <div className="badge badge-outline badge-accent">More</div>
+          <div className="badge badge-outline text-warning">More</div>
         </div>
         <div className="collapse-content text-sm text-justify">
           <p>
             Out of the <b>300</b> individuals who have visited this quest,{" "}
-            <b>no one</b>😢 has taken action. The success of <i>HopeFlow</i>{" "}
+            <b>only 10</b>😢 has taken action. The success of <i>HopeFlow</i>{" "}
             quests relies upon word being spread, so that those who hold the
             answers may be reached.
           </p>
@@ -455,14 +281,14 @@ function App() {
         </div>
       </div>
       <div className="relative overflow-hidden text-lg transition-[max-height] duration-1000 max-h-48 pb-4">
-        <p>
+        <p className="mb-2">
           My trek 520 grando was stolen last week. 51cm height. The red pusher
           pedals might help as well. Please let me know if you happen across one
           on your local online marketplace (anywhere in the US). If seen in
           public, please ask the owner politely where they bought it, and if you
           can see the serial number. It's WTU216LK0060R
         </p>
-        <p>
+        <p className="mb-2">
           I am offering $20 dollars for each post of a Trek 520 Grando with the
           same color scheme in these photos as well as the exact same height (51
           cm). Heights of 49, 50, 52, 53 will be rewarded $10. Can pay out
@@ -476,7 +302,7 @@ function App() {
           away to my in-laws and this trek helped me with the last 5 miles of
           the commute back from work.
         </p>
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white from-15% to-transparent transition-opacity duration-700 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-base-100 from-15% to-transparent transition-opacity duration-700 pointer-events-none" />
         <div className="absolute bottom-0">
           <a
             className="link link-primary"
@@ -499,25 +325,12 @@ function App() {
         </div>
       </div>
       <div className="flex flex-col gap-3 text-lg">
-        <div className="flex flex-row gap-2 items-center">
-          <p className="flex-1">
-            <i>Have the answer? become the hero of this story and</i>
-          </p>
-          <button className="block btn btn-primary w-24">Connect</button>
-        </div>
-        <div className="flex flex-row gap-2 items-center">
-          <p className="flex-1">
-            <i>
-              You may know someone who might have the answer. Share this quest
-              via
-            </i>
-          </p>
-          <button className="block btn btn-secondary w-24">Reflow</button>
-        </div>
+        <button className="block btn btn-primary">Submit a lead</button>
+        <button className="block btn btn-secondary">Share via Reflow</button>
       </div>
-      <div className="collapse bg-base border-none text-info-content border">
+      <div className="collapse bg-base border-none text-info border">
         <input type="checkbox" />
-        <div className="collapse-title pr-4 font-semibold flex flex-row justify-between">
+        <div className="collapse-title font-semibold flex flex-row justify-between pr-0 pl-0 pb-0">
           🎬 What has happened
           <div className="badge badge-outline badge-info">Show</div>
         </div>
@@ -525,18 +338,52 @@ function App() {
           <Timeline />
         </div>
       </div>
-      <div className="collapse bg-base border-none text-success-content border">
+      <div className="collapse bg-base border-none text-success border">
         <input type="checkbox" />
-        <div className="collapse-title pr-4 font-semibold flex flex-row justify-between">
+        <div className="collapse-title font-semibold flex flex-row justify-between pr-0 pl-0 pb-0">
           🌱 Watch the tree grow
           <div className="badge badge-outline badge-success">Watch</div>
         </div>
-        <div className="collapse-content text-sm text-info-content text-justify">
+        <div className="collapse-content text-sm text-success text-justify">
           <ShareTree />
         </div>
       </div>
+      <div
+        className={
+          "absolute z-30 left-0 top-0 right-0 bottom-0 bg-success text-success-content" +
+          (intoVisible ? "" : " hidden")
+        }
+      >
+        <IntroText done={() => setIntoVisible(false)} />
+      </div>
     </div>
   );
+}
+
+function IntroText({ done }: { done: () => void }) {
+  const animateIntro = (p: HTMLDivElement | null) => {
+    if(!p) return;
+    const d = document.createElement("div");
+    d.textContent =  "Saeed, please help find Behrooz's stolen Trek 520 Grando.";
+    for(const [k, v] of Object.entries({
+      left: "1rem",
+      top:"1rem",
+      position: "absolute",
+      fontSize: "32px",
+      fontWeight: "100",
+      opacity: "0",
+      maxWidth: "80%",
+      transition: "opacity",
+      transitionDuration: "1500ms"
+    })) {
+      d.style[k as unknown as keyof CSSStyleDeclaration] = v;
+    }
+    p.appendChild(d);
+    setTimeout(() => {d.style.opacity = "1"}, 300);
+    setTimeout(() => {d.style.opacity = "0"}, 1300);
+    setTimeout(done, 2500);
+  };
+  return <div className="absolute left-0 top-0 right-0 bottom-0" ref={r => animateIntro(r)}></div>;
 }
 
 export default App;

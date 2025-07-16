@@ -10,26 +10,50 @@ body {
   height: 100%;
 }
 
-h1 {
-  font-size: 1.5em;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 1.3em;
-  font-weight: 500;
-}
-
-h3 {
-  font-size: 1.1em;
-  font-weight: 500;
-}
-
-p {
-  margin-bottom: 0.75em;
-}
-
 @import "tailwindcss";
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark;
+}
+@plugin "daisyui/theme" {
+  name: "hopeflow";
+  default: true; /* set as default */
+  prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+  color-scheme: light; /* color of browser-provided UI */
+
+  --color-base-100: rgb(255,255,255);
+  --color-base-200: rgb(245,245,245);
+  --color-base-300: rgb(225,225,225);
+  --color-base-content: rgb(10,10,10);
+  --color-primary: rgb(18,161,125);
+  --color-primary-content: rgb(243,246,248);
+  --color-secondary: rgb(243,246,248);
+  --color-secondary-content: rgb(57,67,81);
+  --color-accent: rgb(8,93,76);
+  --color-accent-content: rgb(243,246,248);
+  --color-neutral: rgb(243,246,248);
+  --color-neutral-content: rgb(10,12,15);
+  --color-info: rgb(0,128,217);
+  --color-info-content: rgb(221,241,255);
+  --color-success: rgb(18,161,54);
+  --color-success-content: rgb(219,253,227);
+  --color-warning: rgb(224,93,22);
+  --color-warning-content: rgb(253,237,215);
+  --color-error: rgb(190,18,56);
+  --color-error-content: rgb(255,228,229);
+
+  /* border radius */
+  --radius-selector: 1rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+
+  /* base sizes */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  /* border size */
+  --border: 1px;
+
+  /* effects */
+  --depth: 1;
+  --noise: 0;
 }
